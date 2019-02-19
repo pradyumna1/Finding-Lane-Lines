@@ -4,16 +4,12 @@
 
 ---
 
-**Finding Lane Lines on the Road**
-Goals / Steps of this project are the following:
+This project had following goals
 * Make a pipeline that finds lane lines on the road
 * Reflect on your work in a written report
 
-
-[test_images_output]: ./test
-
-[image1]: ./examples/grayscale.jpg "Grayscale"
-
+[test_images_output]: ./test_images_output/final_test_images_output.png "All images output"
+[pipeline stages]: ./test_images_output/solidYellowCurvePipeline.png "Pipeline Stages"
 ---
 
 ### Reflection
@@ -29,6 +25,7 @@ My pipeline consisted of 5 steps:
 - Then we will use the Hough transformation to obtain the coordinates of line segments in the masked image.
   This coordinates will be used to approximate the equation of lane lines. The approximation was done in draw_lines() function
   function.
+![alt text][pipeline_stages]
 
 Earler draw_lines() funtion would take the coordinates of line segment and draw them on the image.
 In order to draw a single line on the left and right lanes, the new draw_lines() followed this steps:
@@ -38,8 +35,7 @@ In order to draw a single line on the left and right lanes, the new draw_lines()
 - calculated mean slope and mean intercept for both left and right line.
 - plot the lines with mean slope and intercept, with bounding lines same as the masking polygon's upper and bottom edges.
 
-
-[pipeline stages]: ./test_images_output/solidYellowCurvePipeline.png "Pipeline Stages"
+![alt text][test_images_output]
 
 
 ### 2. Identify potential shortcomings with your current pipeline
