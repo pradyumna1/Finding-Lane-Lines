@@ -3,13 +3,14 @@
 ### This was a great opportunity to refresh computer vision fundamentals. Here is my approach on finding lane lines: 
 
 ---
-
 This project had following goals
 * Make a pipeline that finds lane lines on the road
 * Reflect on your work in a written report
 
 [test_images_output]: ./test_images_output/final_test_images_output.png "All images output"
-[pipeline stages]: ./test_images_output/solidYellowCurvePipeline.png "Pipeline Stages"
+
+[pipeline_stages]: ./test_images_output/solidYellowCurvePipeline.png "Pipeline Stages"
+
 ---
 
 ### Reflection
@@ -25,6 +26,7 @@ My pipeline consisted of 5 steps:
 - Then we will use the Hough transformation to obtain the coordinates of line segments in the masked image.
   This coordinates will be used to approximate the equation of lane lines. The approximation was done in draw_lines() function
   function.
+  
 ![alt text][pipeline_stages]
 
 Earler draw_lines() funtion would take the coordinates of line segment and draw them on the image.
